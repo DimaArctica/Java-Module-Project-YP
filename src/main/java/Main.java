@@ -1,4 +1,3 @@
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("\n\nПривет! Добро пожаловать в приложение 24часа ЛеМан! \n");

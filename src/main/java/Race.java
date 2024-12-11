@@ -7,6 +7,7 @@ public class Race {
     ArrayList<String> leadersArrayList = new ArrayList<>();
     int numberOfLeaders = 0;
     static int maxSpeed = 250, numberOfCars = 3;
+    static String speedErrorMessage = "Введена некорректная скорость. Введите целое число от 0 до "+ maxSpeed +".";
 
     void addCars() {
         Scanner scanner = new Scanner(System.in);
@@ -20,13 +21,13 @@ public class Race {
                 if (scanner.hasNextInt()) {
                     carSpeed = scanner.nextInt();
                     if (carSpeed < 0 || carSpeed > maxSpeed) {
-                        System.out.println("Введена некорректная скорость. Введите целое число от 0 до 250.");
+                        System.out.println(speedErrorMessage);
                     } else {
                         carArrayList.add(new Car(carName, carSpeed));
                         break;
                     }
                 } else {
-                    System.out.println("Введена некорректная скорость. Введите целое число от 0 до 250.");
+                    System.out.println(speedErrorMessage);
                 }
             }
         }
